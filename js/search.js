@@ -41,6 +41,7 @@ function animateItemsInSlideBar() {
   const listItems = $('.open_Tab .open_box ul li');
 
   if (listItems.hasClass('hidden')) {
+    document.getElementById("icOpenClose").classList = "fa-solid fa-xmark fa-xl"
     listItems.each(function (index) {
       const listItem = $(this);
       setTimeout(function () {
@@ -48,6 +49,7 @@ function animateItemsInSlideBar() {
       }, 100 * index);
     });
   } else {
+    document.getElementById("icOpenClose").classList = "fas fa-bars"
     listItems.each(function (index) {
       const listItem = $(this);
       setTimeout(function () {

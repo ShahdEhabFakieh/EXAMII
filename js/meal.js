@@ -48,6 +48,7 @@ async function fetchMealData(mealId) {
   let mealResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
   let mealData = await mealResponse.json()
   mealData = mealData.meals[0]
+  hideLoading()
   bindMainDataToViews(
     mealData.strMeal,
     mealData.strMealThumb,
@@ -93,5 +94,12 @@ function addToTagsList(tagName) {
   tagsList.innerHTML += `
     <span class="rounded-2 bg-secondary p-2 mt-3 me-3">${tagName}</span>
     `
+}
+
+function hideLoading() {
+  $('.loader').fadeOut(500, function () {
+    $('#loading').fadeOut()
+    $('container').css({ overflow: "auto" });
+  })
 }
 

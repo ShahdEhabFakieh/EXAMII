@@ -21,6 +21,7 @@ $(document).ready(function () {
     const listItems = $('.open_Tab .open_box ul li');
   
     if (listItems.hasClass('hidden')) {
+      document.getElementById("icOpenClose").classList = "fa-solid fa-xmark fa-xl"
       listItems.each(function (index) {
         const listItem = $(this);
         setTimeout(function () {
@@ -28,6 +29,7 @@ $(document).ready(function () {
         }, 100 * index);
       });
     } else {
+      document.getElementById("icOpenClose").classList = "fas fa-bars"
       listItems.each(function (index) {
         const listItem = $(this);
         setTimeout(function () {
@@ -41,6 +43,7 @@ async function fetchAllIngredients() {
     let ingredientsResponse = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?i=list")
     let ingredientsArray = await ingredientsResponse.json()
     ingredientsArray = ingredientsArray.meals
+    hideLoading()
     let length = Math.min(20, ingredientsArray.length)
     for (i = 0; i < length; i++) {
         let ingredient = ingredientsArray[i]
@@ -65,5 +68,12 @@ function onIngredientClicked(ingredient) {
   localStorage.setItem('isFilter', "1");
   localStorage.setItem('filterParam', `i=${ingredient}`);
   location.href = "index.html"
+}
+
+function hideLoading() {
+  $('.loader').fadeOut(500, function () {
+    $('#loading').fadeOut()
+    $('container').css({ overflow: "auto" });
+  })
 }
 

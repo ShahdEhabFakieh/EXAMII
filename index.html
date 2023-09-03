@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
   <div class="open_Tab position-fixed">
     <div class="open_box">
       <ul class="list p-5 list-unstyled">
@@ -38,7 +39,7 @@
     <div class="parent">
       <a href="index.html"><img src="./images/logo.jpg" class="logo" alt="logo"></a>
       <div class="btn_open text-white">
-        <i class="fas fa-bars"></i>
+        <i id="icOpenClose"></i>
       </div>
       <div class="text-center side-i">
         <span class="side-icons"><i class="fa-solid fa-globe" style="color: #000000;"></i></span>
@@ -49,9 +50,10 @@
   </div>
 
   <div id="Home">
+    <div id="loading"> <span class="loader"></span></div>
     <div class="container">
       <div id="mealsList" class="row row-cols-1 row-cols-md-3">
-        
+
       </div>
     </div>
   </div>

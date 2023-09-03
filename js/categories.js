@@ -19,6 +19,7 @@ function animateItemsInSlideBar() {
   const listItems = $('.open_Tab .open_box ul li');
 
   if (listItems.hasClass('hidden')) {
+    document.getElementById("icOpenClose").classList = "fa-solid fa-xmark fa-xl"
     listItems.each(function (index) {
       const listItem = $(this);
       setTimeout(function () {
@@ -26,6 +27,7 @@ function animateItemsInSlideBar() {
       }, 100 * index);
     });
   } else {
+    document.getElementById("icOpenClose").classList = "fas fa-bars"
     listItems.each(function (index) {
       const listItem = $(this);
       setTimeout(function () {
@@ -39,6 +41,7 @@ async function fetchAllCategories() {
   let categoriesResponse = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
   let categoriesArray = await categoriesResponse.json()
   categoriesArray = categoriesArray.categories
+  hideLoading()
   for (i = 0; i < categoriesArray.length; i++) {
     let category = categoriesArray[i]
     addToCategoriesList(category.strCategory, category.strCategoryDescription, category.strCategoryThumb)
@@ -63,5 +66,12 @@ function onCategoryClicked(category) {
   localStorage.setItem('isFilter', "1");
   localStorage.setItem('filterParam', `c=${category}`);
   location.href = "index.html"
+}
+
+function hideLoading() {
+  $('.loader').fadeOut(500, function () {
+    $('#loading').fadeOut()
+    $('container').css({ overflow: "auto" });
+  })
 }
 

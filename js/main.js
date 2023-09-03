@@ -29,6 +29,7 @@ function animateItemsInSlideBar() {
   const listItems = $('.open_Tab .open_box ul li');
 
   if (listItems.hasClass('hidden')) {
+    document.getElementById("icOpenClose").classList = "fa-solid fa-xmark fa-xl"
     listItems.each(function (index) {
       const listItem = $(this);
       setTimeout(function () {
@@ -36,6 +37,7 @@ function animateItemsInSlideBar() {
       }, 100 * index);
     });
   } else {
+    document.getElementById("icOpenClose").classList = "fas fa-bars"
     listItems.each(function (index) {
       const listItem = $(this);
       setTimeout(function () {
@@ -49,6 +51,7 @@ async function filterMeals(filterParam) {
   let mealsResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?${filterParam}`)
   let mealsArray = await mealsResponse.json()
   mealsArray = mealsArray.meals
+  hideLoading()
   if (mealsArray == null) return
   let length = Math.min(20, mealsArray.length)
   for (i = 0; i < length; i++) {
@@ -61,6 +64,7 @@ async function fetchAllMeals() {
   let mealsResponse = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
   let mealsArray = await mealsResponse.json()
   mealsArray = mealsArray.meals
+  hideLoading()
   if (mealsArray == null) return
   let length = Math.min(20, mealsArray.length)
   for (i = 0; i < length; i++) {
@@ -87,5 +91,12 @@ function addToMealsList(mealId, mealName, mealImgURL) {
 function onMealClicked(mealId) {
   localStorage.setItem('currentMealId', mealId);
   location.href = "meal.html"
+}
+
+function hideLoading() {
+  $('.loader').fadeOut(500, function () {
+    $('#loading').fadeOut()
+    $('container').css({ overflow: "auto" });
+  })
 }
 
