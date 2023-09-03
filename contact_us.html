@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="./images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/contact_us.css" />
+    <title>Yummy</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+    <div class="open_Tab position-fixed">
+        <div class="open_box">
+            <ul class="list p-5 list-unstyled">
+                <!--<li><a href="#Home">Home</a></li>-->
+                <li><a href="search.html">search</a></li>
+                <li><a href="categories.html">categories</a></li>
+                <li><a href="area.html">area</a></li>
+                <li><a href="ingredients.html">ingredients</a></li>
+                <li><a href="contact_us.html">contact us</a></li>
+            </ul>
+
+            <div class="social-icons">
+                <span class="soc-icons"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></span><span
+                    class="soc-icons"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></span><span
+                    class="soc-icons"><i class="fa-solid fa-globe" style="color: #ffffff;"></i></span>
+                <p class="text-white">Copyright Â© 2019 All Rights<br>
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="parent">
+            <a href="index.html"><img src="./images/logo.jpg" class="logo" alt="logo"></a>
+            <div class="btn_open text-white">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="text-center side-i">
+                <span class="side-icons"><i class="fa-solid fa-globe" style="color: #000000;"></i></span>
+
+                <span class="side-icons"><i class="fa-solid fa-share-nodes" style="color: #000000;"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row py-5 g-4 ">
+                <div class="contact_us min-vh-50 d-flex justify-content-center align-items-center">
+                    <div class="container text-center w-75">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <input id="Name" type="text" class="form-control" placeholder="Enter Your Name">
+                                <div id="Name_Alert" class="alert alert-danger w-100 d-none">
+                                    Invalid Name
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="Email" type="email" class="form-control " placeholder="Enter Your Email">
+                                <div id="Email_Alert" class="alert alert-danger w-100 d-none">
+                                    Email not valid, *example@.com
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="Phone"  type="text" class="form-control "
+                                    placeholder="Enter Your Phone">
+                                <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Invalid Phone Number
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="Age" type="number" class="form-control "
+                                    placeholder="Enter Your Age">
+                                <div id="Age_Alert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Invalid age
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="Password" type="password"
+                                    class="form-control " placeholder="Enter Your Password">
+                                <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Enter valid password *Minimum eight characters, at least one letter and one number:*
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="Re-password" type="password"
+                                    class="form-control " placeholder="Re-password">
+                                <div id="Repassword_Alert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Un-correct password
+                                </div>
+                            </div>
+                        </div>
+                        <button id="contactbtn" type="submit" class="btn btn-outline-danger mt-4 px-4">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/contact_us.js"></script>
+</body>
+
+</html>

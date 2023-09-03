@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/x-icon" href="./images/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/search.css" />
+  <title>Yummy</title>
+
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+  <div class="open_Tab position-fixed">
+    <div class="open_box">
+      <ul class="list p-5 list-unstyled">
+        <!--<li><a href="#Home">Home</a></li>-->
+        <li><a href="search.html">search</a></li>
+        <li><a href="categories.html">categories</a></li>
+        <li><a href="area.html">area</a></li>
+        <li><a href="ingredients.html">ingredients</a></li>
+        <li><a href="contact_us.html">contact us</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <span class="soc-icons"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></span><span
+          class="soc-icons"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></span><span
+          class="soc-icons"><i class="fa-solid fa-globe" style="color: #ffffff;"></i></span>
+        <p class="text-white">Copyright Â© 2019 All Rights<br>
+          Reserved.</p>
+      </div>
+    </div>
+    <div class="parent">
+      <a href="index.html"><img src="./images/logo.jpg" class="logo" alt="logo"></a>
+      <div class="btn_open text-white">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="text-center side-i">
+        <span class="side-icons"><i class="fa-solid fa-globe" style="color: #000000;"></i></span>
+
+        <span class="side-icons"><i class="fa-solid fa-share-nodes" style="color: #000000;"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="Search-page">
+    <div class="container" id="search_container">
+      <div class="row py-4">
+        <div class="col-md-6">
+          <input id="inputName" class="form-control bg-transparent text-white" type="text" placeholder="Search By Name">
+        </div>
+
+        <div class="col-md-6">
+          <input id="inputLetter" class="form-control bg-transparent text-white" type="text" maxlength="1" placeholder="Search By First-Letter">
+        </div>
+
+
+      </div>
+
+
+      <div id="mealsList" class="row row-cols-1 row-cols-md-3">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/search.js"></script>
+</body>
+
+</html>

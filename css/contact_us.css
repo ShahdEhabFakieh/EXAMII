@@ -1,0 +1,114 @@
+:root {
+    --off-canvas-width: 300px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+
+.open_Tab {
+    height: 200vh;
+    /*top: 150px;*/
+    left: 0;
+    z-index: 9999999999;
+    display: flex;
+    white-space: nowrap;
+    background-color: #ffffff;
+
+}
+
+.open_box {
+    /*padding: 10px;*/
+    width: 40vh;
+    background-color: black;
+    height: 100vh;
+    position: relative;
+}
+
+
+.open_Tab .btn_open i {
+    color: rgb(5, 5, 5);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.open_box ul li {
+    font-size: 25px;
+    text-align: start;
+    padding: 5px;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.hidden {
+    animation-name: slideOut;
+}
+
+.visible {
+    animation-name: slideIn;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_open {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 200px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+    margin-top: 30px;
+}
+
+.soc-icons {
+    padding: 5px;
+
+}
+
+.social-icons {
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+.side-i {
+    margin-top: 170px;
+}
+
+.side-icons {
+    display: block;
+    padding: 4px;
+}
+
+
+body {
+    background-color: black;
+}
